@@ -1,0 +1,83 @@
+* {
+  // Theme colors
+  --primary: #01a8eb;
+  --primary-dark: #009b9e;
+  --primary-light: #78fdff;
+
+  --secondary: #eb7c00;
+  --secondary-dark: #9e5300;
+  --secondary-light: #ebb272;
+
+  --bg-color: #fafafa;
+
+  // Colors
+  --black: #181818;
+  --gray: #888888;
+  --white: #fafafa;
+  --success: #0da100;
+  --danger: #dd5449;
+  --warning: #ff9900;
+  --info: #0400ff;
+
+  --primary-gradient: linear-gradient(
+    135.23deg,
+    var(--primary-dark) 15.1%,
+    var(--primary-light) 80.41%
+  );
+  --primary-gradient-reverse: linear-gradient(
+    135.23deg,
+    var(--primary-light) 15.1%,
+    var(--primary-dark) 80.41%
+  );
+
+  --drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --drop-shadow-small: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  --drop-shadow-hover: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  --inner-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+  --fs-h1: 60px;
+  --fs-h2: 40px;
+  --fs-h3: 25px;
+  --fs-h4: 20px;
+  --fs-h5: 19px;
+  --fs-h6: 16px;
+  --fs-p: 16px;
+  --fs-sm: 15px;
+  --fs-xs: 10px;
+  --fs-btn: 17px;
+
+  --default-margin: 20px;
+  --default-padding: 15px;
+  --default-border-radius: 15px;
+  --small-border-radius: 8px;
+  --navbar-height: 80px;
+}
+
+#phone::before {
+  content: '+41 00 000 00 00';
+  display: inline;
+}
+
+#mail::before {
+  content: 'contact@mon-domain.ch';
+  display: inline;
+}
+
+@media screen and (min-width: 768px) {
+  * {
+    --fs-h1: 80px;
+    --fs-h2: 48px;
+    --fs-h3: 28px;
+    --fs-h4: 24px;
+    --fs-h5: 19px;
+    --fs-h6: 17px;
+    --fs-p: 17px;
+    --fs-sm: 15px;
+    --fs-xs: 10px;
+    --fs-btn: 17px;
+
+    --default-margin: 20px;
+    --default-padding: 15px;
+    --navbar-height: 80px;
+  }
+}

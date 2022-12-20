@@ -1,0 +1,227 @@
+nav {
+  background-color: var(--white);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  box-shadow: var(--drop-shadow);
+  top: 0px;
+  left: 0px;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    width: calc(100vw - (2 * var(--default-margin)));
+    height: var(--navbar-height);
+    margin-left: var(--default-margin);
+    margin-right: var(--default-margin);
+    justify-content: space-between;
+    text-align: center;
+
+    &Left,
+    &Right {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &Left {
+      width: 75px;
+
+      > a {
+        width: 100%;
+      }
+    }
+
+    &Right {
+      display: none;
+      gap: var(--default-margin);
+
+      > a:not(.btn) {
+        color: var(--black);
+        text-decoration: none;
+
+        &.selected {
+          font-weight: 700;
+
+          &::after {
+            content: '';
+            width: 100%;
+            margin-bottom: -2px;
+            display: block;
+            border-top: dashed 2px var(--red);
+          }
+        }
+
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+
+    &Burger {
+      width: 26px;
+      z-index: 12;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &.isOpen .iconLabel::after {
+        content: 'Fermer';
+      }
+
+      .iconLabel {
+        transform: translateY(2px);
+        &::after {
+          content: 'Menu';
+        }
+      }
+
+      > a {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .burger {
+        background: var(--primary-gradient);
+        height: 4px;
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+        transition: all 0.3s;
+      }
+
+      .burger + .burger {
+        margin-top: 3px;
+      }
+
+      &.isOpen .burger:nth-child(1) {
+        animation: all ease 0.3s;
+        transform: translateY(7px) rotate(-45deg);
+      }
+
+      &.notOpen .burger:nth-child(1) {
+        animation: all ease 0.3s;
+        transform: rotate(0);
+      }
+
+      &.isOpen .burger:nth-child(2) {
+        animation: ease 0.3s;
+        transform: scale(0);
+      }
+
+      &.notOpen .burger:nth-child(2) {
+        animation: ease 0.3s;
+        transform: scale(1);
+      }
+
+      &.isOpen .burger:nth-child(3) {
+        animation: ease 0.3s;
+        transform: translateY(-7px) rotate(45deg);
+      }
+
+      &.notOpen .burger:nth-child(3) {
+        animation: ease 0.3s;
+        transform: rotate(0);
+      }
+    }
+
+    &Mid {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-left: -26px;
+
+      img {
+        width: 100%;
+        max-width: 180px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  nav .menu {
+    &Left,
+    &Right {
+      display: flex;
+    }
+  }
+
+  nav .menu .menuRight {
+    display: flex;
+  }
+
+  #burgerBtn {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  nav .menu .menuRight {
+    display: flex;
+  }
+}
+
+// ##### Mobile Menu #####
+
+.menuMobile {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--navbar-height));
+  width: 100%;
+  padding: var(--default-margin);
+  overflow-y: scroll;
+  position: absolute;
+  top: var(--navbar-height);
+  right: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--white);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &--closed {
+    transition: all 0.5s ease-in-out;
+    right: calc(-1 * 110vw);
+  }
+
+  > a:not(.btn) {
+    color: var(--black);
+    text-decoration: none;
+    padding-top: var(--default-margin);
+    padding-bottom: var(--default-margin);
+    border-bottom: #cdcdcd 1px solid;
+
+    &.selected {
+      font-weight: 700;
+      text-decoration: underline var(--red) 2px dashed;
+
+      /*
+      &::after {
+        content: '';
+        width: inherit;
+        margin-bottom: -2px;
+        display: block;
+        border-top: dashed 2px var(--red);
+      }*/
+    }
+  }
+
+  &__langSelector {
+    margin-top: 30px;
+    i {
+      color: var(--primary-blue);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menuMobile {
+    display: none;
+    visibility: hidden;
+  }
+}
