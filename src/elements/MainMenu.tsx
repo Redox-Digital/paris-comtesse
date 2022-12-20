@@ -26,16 +26,19 @@ export default function MainMenu() {
           </Link>
         </div>
         <div className="menuRight">
+          {/*
           <Link to="/" className={location.pathname === '/' ? 'selected' : ''}>
             {t('home')}
           </Link>
+
           <Link to="/about" className={location.pathname === '/about' ? 'selected' : ''}>
             {t('about')}
           </Link>
           <Link to="#" className="btn btn--primary">
             <i className="fa-regular fa-calendar-days" />
             {t('cta')}
-          </Link>
+        </Link> 
+        */}
           <LanguageSelector />
         </div>
         <button
@@ -51,6 +54,7 @@ export default function MainMenu() {
         </button>
       </div>
       <MobileMenu isOpen={burgerOpen}>
+        {/*
         <Link to="/" className={location.pathname === '/' ? 'selected' : ''}>
           {t('home')}
         </Link>
@@ -61,6 +65,7 @@ export default function MainMenu() {
           <i className="fa-regular fa-calendar-days" />
           {t('cta')}
         </Link>
+      */}
       </MobileMenu>
     </nav>
   );

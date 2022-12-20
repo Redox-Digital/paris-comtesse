@@ -14,7 +14,7 @@
     color: var(--white);
     text-shadow: var(--drop-shadow);
     // Color overlay
-    background: rgba(70, 127, 43, 0.6);
+    background: rgba(var(--primary-dark-rgb), 0.6);
   }
 
   &--full {

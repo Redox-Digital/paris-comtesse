@@ -5,10 +5,11 @@ interface HeroProps {
   page: string;
   imgPath: string;
   full?: boolean;
+  video?: string;
 }
 
 export default function Hero(props: HeroProps) {
-  const { page, imgPath, full } = props;
+  const { page, imgPath, full, video } = props;
   const { t } = useTranslation('', { keyPrefix: page });
 
   return (

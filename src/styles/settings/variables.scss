@@ -1,12 +1,15 @@
 * {
   // Theme colors
-  --primary: #01a8eb;
-  --primary-dark: #009b9e;
-  --primary-light: #78fdff;
+  --primary: #4488bf;
+  --primary-dark: #265999;
+  --primary-light: #9ac2e2;
 
-  --secondary: #eb7c00;
-  --secondary-dark: #9e5300;
-  --secondary-light: #ebb272;
+  --primary-rgb: 68, 136, 191;
+  --primary-dark-rgb: 38, 89, 153;
+
+  --secondary: #d5ad36;
+  --secondary-dark: #ca9703;
+  --secondary-light: #f4f2c9;
 
   --bg-color: #fafafa;
 
@@ -19,14 +22,10 @@
   --warning: #ff9900;
   --info: #0400ff;
 
-  --primary-gradient: linear-gradient(
-    135.23deg,
-    var(--primary-dark) 15.1%,
-    var(--primary-light) 80.41%
-  );
+  --primary-gradient: linear-gradient(135.23deg, var(--primary-dark) 15.1%, var(--primary) 80.41%);
   --primary-gradient-reverse: linear-gradient(
     135.23deg,
-    var(--primary-light) 15.1%,
+    var(--primary) 15.1%,
     var(--primary-dark) 80.41%
   );
 
@@ -54,12 +53,12 @@
 }
 
 #phone::before {
-  content: '+41 00 000 00 00';
+  content: '+41 32 846 14 30';
   display: inline;
 }
 
 #mail::before {
-  content: 'contact@mon-domain.ch';
+  content: 'info@pc-sa.ch';
   display: inline;
 }
 

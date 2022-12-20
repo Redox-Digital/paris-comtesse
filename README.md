@@ -1,14 +1,12 @@
-# TS React Boilerplate
+# Paris & Comtesse Front-End App
 
-App adaptable for a TS React project. Boilerplate created by [Redox Digital](https://redoxdigital.ch).
+Front-End App for Paris & Comtesse SA, created by [Redox Digital](https://redoxdigital.ch).
 
-This BP includes Sass.
-
-*This README is a work in progress and is still incomplete.*
+Paris & Comtesse SA is a metalic construction company based in Boudry (NE), Switerland. You can visit the website on [pc-sa.ch](https://pc-sa.ch).
 
 ### 🔍 Overview
 
-### ⚛️ Boilerplate Features
+### ⚛️ Project Features
 
 - **React:** A JavaScript library for building user interfaces.
 - **TypeScript:** Written in TypeScript language.
