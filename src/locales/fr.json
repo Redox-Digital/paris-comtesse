@@ -16,5 +16,13 @@
   "About": {
     "mainTitle": "À propos",
     "subtitle": "Sous-titre personnalisé"
+  },
+  "UnderConstruction": {
+    "title": "Notre site est actuellement en construction",
+    "desc": "Paris & Comtesse SA est une entreprise de construction métallique basée à Boudry (NE)."
+  },
+  "Error404": {
+    "mainTitle": "Erreur 404",
+    "subtitle": "La page que vous recherchez n'existe pas."
   }
 }

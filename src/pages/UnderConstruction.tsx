@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../input/LanguageSelector';
 
 export default function UnderConstruction() {
   const { t } = useTranslation('', { keyPrefix: 'UnderConstruction' });
@@ -17,16 +18,16 @@ export default function UnderConstruction() {
         </div>
         <div className="contentMain">
           <img src={process.env.REACT_APP_LOGO_ABS_PATH} alt="Paris & Comtesse SA" />
-          <h2>Notre site est actuellement en construction</h2>
+          <h2>{t('title')}</h2>
         </div>
         <div className="contentBottom">
-          <p>Paris & Comtesse est une entreprise de construction métallique basée à Boudry (NE).</p>
+          <p>{t('desc')}</p>
           <p>
-            <a href="tel:+41 32 846 14 30">
+            <a href="tel:+41 32 846 14 30" target="_blank" rel="noreferrer noopener">
               <span id="phone" />
             </a>
             <br />
-            <a href="mailto:info@pc-sa.ch">
+            <a href="mailto:info@pc-sa.ch" target="_blank" rel="noreferrer noopener">
               <span id="mail" />
             </a>
             <br />
@@ -34,7 +35,9 @@ export default function UnderConstruction() {
             Paris & Comtesse SA, Chem. de la Baconnière 55, CH-2017 Boudry
           </p>
         </div>
-        <div className="contentDecoration" />
+        <div className="contentDecoration">
+          <LanguageSelector />
+        </div>
       </div>
     </main>
   );

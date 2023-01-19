@@ -1,5 +1,10 @@
 import React from 'react';
+import Hero from '../components/Hero';
 
 export default function Error404() {
-  return <p>Error 404</p>;
+  return (
+    <main id="error404">
+      <Hero page="Error404" imgPath="" full />
+    </main>
+  );
 }

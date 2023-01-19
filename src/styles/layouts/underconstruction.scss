@@ -91,7 +91,7 @@
   overflow: hidden;
 
   a {
-    color: var(--primary-dark);
+    color: var(--secondary);
   }
 
   > .overlay {
@@ -176,7 +176,8 @@
       bottom: 0px;
       left: 0px;
       z-index: 5;
-      background-color: var(--primary-light);
+      background-color: #2e2e2ee8;
+      color: var(--white);
       padding: 0px 20px;
       width: var(--bottom-width);
       display: flex;
@@ -201,6 +202,14 @@
       background-color: var(--secondary);
       overflow: hidden;
       z-index: 6;
+
+      .langSelector {
+        margin-top: 20px;
+
+        > select {
+          padding: 0;
+        }
+      }
     }
   }
 }

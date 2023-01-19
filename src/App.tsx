@@ -16,11 +16,13 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<UnderConstruction />} />
+        {/* 
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
+          */}
         <Route path="/*" element={<Error404 />} />
       </Routes>
-      {location.pathname === '/' ? '' : <Footer />}
+      {/* <Footer /> */}
     </div>
   );
 }
